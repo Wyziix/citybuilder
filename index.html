@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>CityBuilder</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="topbar">
+  <div class="tb-group city">
+    <div id="cityName">CityBuilder</div>
+    <div id="cityRank" class="sub">-</div>
+  </div>
+  <div class="tb-group stat" title="Money (last month's balance below)">
+    <span class="ico">💰</span><div><div id="money">-</div><div id="moneyDelta" class="sub">-</div></div>
+  </div>
+  <div class="tb-group stat" title="Population">
+    <span class="ico">👥</span><div><div id="pop">0</div><div id="popSub" class="sub">-</div></div>
+  </div>
+  <div class="tb-group stat" title="Approval rating">
+    <span class="ico" id="happyIco">😊</span><div><div id="happy">-</div><div class="sub">approval</div></div>
+  </div>
+  <div class="tb-group stat" title="Date">
+    <span class="ico">📅</span><div><div id="date">-</div><div id="clock" class="sub">-</div></div>
+  </div>
+  <div class="tb-group rci" title="Demand: Residential / Commercial / Industrial">
+    <div class="rbar"><div class="fill" id="dR"></div><span>R</span></div>
+    <div class="rbar"><div class="fill" id="dC"></div><span>C</span></div>
+    <div class="rbar"><div class="fill" id="dI"></div><span>I</span></div>
+  </div>
+  <div class="tb-group speeds">
+    <button data-speed="0" title="Pause (Space)">⏸</button>
+    <button data-speed="1" title="Normal">▶</button>
+    <button data-speed="2" title="Fast">▶▶</button>
+    <button data-speed="3" title="Faster">▶▶▶</button>
+    <button data-speed="4" title="Ludicrous">⚡</button>
+  </div>
+  <div class="tb-group menu">
+    <button id="btnBudget" title="Budget & taxes">💵</button>
+    <button id="btnStats" title="Statistics">📈</button>
+    <button id="btnNight" title="Toggle day/night cycle">🌗</button>
+    <button id="btnSave" title="Quick save (Ctrl+S)">💾</button>
+    <button id="btnMenu" title="Menu">☰</button>
+    <button id="btnHelp" title="Help (H)">❔</button>
+  </div>
+</div>
+
+<div id="toolbar"></div>
+<div id="submenu" class="panel hidden"></div>
+<div id="overlaybar"></div>
+<div id="legend" class="hidden"></div>
+<div id="minimapWrap" class="panel"><canvas id="minimap" width="440" height="240"></canvas></div>
+<div id="infoPanel" class="panel hidden"></div>
+<div id="toolHint"></div>
+<div id="toasts"></div>
+<div id="tooltip" class="hidden"></div>
+<div id="modalBg" class="hidden"><div id="modal" class="panel"></div></div>
+
+<script src="js/util.js"></script>
+<script src="js/defs.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/world.js"></script>
+<script src="js/game.js"></script>
+<script src="js/agents.js"></script>
+<script src="js/render.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/input.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
